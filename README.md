@@ -2,8 +2,6 @@
 
 A responsive web application built with **React** and **Redux Toolkit** that tracks the top cryptocurrencies using real-time simulated updates. It fetches live market data from the [CoinGecko API](https://www.coingecko.com/en/api) and simulates price, percentage, and volume changes every second.
 
-![Demo](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTIxYWU3NDFmYTQ1ODNiZTY3YjBkNzE3NDliMDU2ZTQyZTU3ZDUwYyZjdD1n/LmNwrBheE1yN0UOaDR/giphy.gif)
-
 ---
 
 ## 🧰 Tech Stack
