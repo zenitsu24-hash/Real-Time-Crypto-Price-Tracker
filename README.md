@@ -32,8 +32,8 @@ A responsive web application built with **React** and **Redux Toolkit** that tra
 ## 📦 Installation & Setup
 
 ### 1. Clone the Repo
-```bash
-git clone https://github.com/your-username/crypto-tracker.git
+```bash[
+git clone https://github.com/zenitsu24-hash/Real-Time-Crypto-Price-Tracker.git
 cd crypto-tracker
 ```
 
