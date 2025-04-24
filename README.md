@@ -1,3 +1,47 @@
+# 🚀 Real-Time Crypto Price Tracker
+
+A responsive web application built with **React** and **Redux Toolkit** that tracks the top cryptocurrencies using real-time simulated updates. It fetches live market data from the [CoinGecko API](https://www.coingecko.com/en/api) and simulates price, percentage, and volume changes every second.
+
+![Demo](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTIxYWU3NDFmYTQ1ODNiZTY3YjBkNzE3NDliMDU2ZTQyZTU3ZDUwYyZjdD1n/LmNwrBheE1yN0UOaDR/giphy.gif)
+
+---
+
+## 🧰 Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| **React** | UI rendering |
+| **Redux Toolkit** | State management |
+| **Tailwind CSS** | Styling & responsiveness |
+| **CoinGecko API** | Real cryptocurrency data |
+| **setInterval()** | Simulates WebSocket-like updates |
+| **Vite** *(optional)* | Fast development environment |
+
+---
+
+## 🏗️ Architecture
+
+- **/components** — UI table for displaying crypto assets
+- **/features/crypto** — Redux slice for asset state & fetching API
+- **/utils/mockUpdater.js** — Simulates real-time price and volume updates
+- **Redux Store** — Centralized global state for all assets
+- **Responsive Table** — Mobile-first layout with scroll and clean formatting
+
+---
+
+## 📦 Installation & Setup
+
+### 1. Clone the Repo
+```bash
+git clone https://github.com/your-username/crypto-tracker.git
+cd crypto-tracker
+```
+
+### 2. Install Dependencies
+```bash
+npm install
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
