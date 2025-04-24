@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchCryptoData, updateAssets } from './Features/Crypto/CryptoSlice';
+import { simulateCryptoUpdates } from './Utils/mockUpdater';
+import CryptoTable from './Components/CryptoTable';
 
 function App() {
+  const dispatch = useDispatch();
+  const assets = useSelector((state) => state.crypto.assets);
+  const status = useSelector((state) => state.crypto.status);
+
+  useEffect(() => {
+    dispatch(fetchCryptoData());
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (status === 'succeeded') {
+      const interval = setInterval(() => {
+        const updatedAssets = simulateCryptoUpdates(assets);
+        dispatch(updateAssets(updatedAssets));
+      }, 1500);
+
+      return () => clearInterval(interval);
+    }
+  }, [assets, dispatch, status]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container mx-auto">
+      <h1 className="text-3xl font-bold text-center my-6">Crypto Price Tracker</h1>
+      <CryptoTable />
     </div>
   );
 }
 
 export default App;
+
